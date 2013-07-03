@@ -1,0 +1,146 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=1024" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Hackerspace Bremen e.V. Projekte</title>
+		
+		<meta name="description" content="make|hack|modify - Eine Hobbywerkstatt für jede_n" />
+		<meta name="author" content="Hackerspace Bremen e.V." />
+
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+		<link href="css/impress-demo.css" rel="stylesheet" />
+		<link href="css/projects.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="favicon.png" />
+		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	</head>
+
+	<body class="impress-not-supported">
+
+		<!--
+			For example this fallback message is only visible when there is `impress-not-supported` class on body.
+		-->
+		<div class="fallback-message">
+			<p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+			<p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+		</div>
+
+		<div id="impress">
+
+			<!--
+				So to make a summary of all the possible attributes used to position presentation steps, we have:
+				
+				* `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+					the canvas in pixels; their default value is 0;
+				* `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+					the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+					are exactly the same;
+				* `data-scale` - defines the scale of step element; default value is 1
+				
+				These values are used by impress.js in CSS transformation functions, so for more information consult
+				CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+				
+			-->
+			<!--<div id="overview" class="step" data-x="3000" data-y="1500" data-scale="20">
+			</div>-->
+			
+			<div id="logo" class="step" data-x="1000" data-y="1000" data-scale="20">
+				<img src="images/HSpace_HB_Logo.png" style="width:100%;"/>
+			</div>
+
+			<div id="open_notifier_bild" class="step" data-x="0" data-y="1000" data-z="-1500" data-scale="1" data-rotate="90">
+				<div class="half">
+					<h2>Open Space Notifier</h2>
+				</div>
+				<div class="half">
+				
+				</div>
+			</div>
+			<div id="open_notifier_beschreibung" class="step" data-x="0" data-y="0" data-z="-1500" data-scale="0.1" data-rotate="66">
+				Sagt wenn Space open :-P
+			</div>
+			
+			<div id="robokids" class="step" data-x="-500" data-y="1100" data-scale="1" data-rotate="-120">
+				<h2>Brainfuck Robots</h2>
+			</div>
+			
+			<div id="3ddrucker" class="step" data-x="0" data-y="2000" data-scale="1" data-z="-1500" data-rotate="-180">
+				<h2>3D-Drucker</h2>
+				<img src="images/3D-Drucker.jpg" style="width:50%;"/>
+			</div>
+			
+			<!--<div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+				<p>It's a <strong>presentation tool</strong> <br/>
+				inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
+				and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+			</div>
+
+			<div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+				<p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+			</div>
+
+			<div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+				<p>and <b>tiny</b> ideas</p>
+			</div>
+
+			<div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+				<p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+			</div>
+
+			<div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+				<p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+			</div>
+
+			<div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+				<p>want to know more?</p>
+				<q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
+			</div>
+
+			<div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+				<p>one more thing...</p>
+			</div>
+
+			<div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+				<p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
+				<span class="footnote">* beat that, prezi ;)</span>
+			</div>-->
+		</div>
+
+		<script>
+		if ("ontouchstart" in document.documentElement) { 
+			document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+		}
+		</script>
+
+		<script src="js/impress.js"></script>
+		<script>
+
+			impress().init();
+			
+			var automatic = true;
+			var seconds = 10;
+			var first = true;
+			
+			var makeSlideshow = function(){
+				console.log("makeSlideshow");
+				if(first){
+					first = false;
+				}else if(automatic){
+					impress().next();
+					console.log("next");
+				}
+				
+				
+				
+				setTimeout(makeSlideshow,seconds*1000);
+			}
+
+			window.onload = function(){
+				makeSlideshow();
+			}
+		</script>
+
+	</body>
+</html>
